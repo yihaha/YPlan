@@ -1,9 +1,5 @@
 package com.yibh.yplan.sort;
 
-import android.util.Log;
-
-import com.elvishew.xlog.XLog;
-
 import java.util.Arrays;
 
 /**
@@ -15,7 +11,8 @@ public class YSortTest {
     public static void main(String[] strings) {
         int[] a = {1, 10, -10, 12, 7, 9, -3};
 //        insertionSort(a);
-        seclectionSort(a);
+//        seclectionSort(a);
+        insertSort(a);
     }
 
 
@@ -50,5 +47,38 @@ public class YSortTest {
 
         }
     }
+
+    /**
+     * 插入排序
+     */
+    public static void insertSort(int[] arr) {
+
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[j + 1] < arr[j]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+                System.out.println("插入排序:  " + Arrays.toString(arr));
+        }
+    }
+
+    /**
+     * 选择排序
+     * @param arr
+     */
+    public static void selectSort(int [] arr){
+        for (int i=0;i<arr.length;i++){
+            int min=arr[i];
+            for (int j=i+1;j<arr.length;j++){
+
+            }
+        }
+
+    }
+
+
 
 }
